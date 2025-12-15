@@ -1,222 +1,152 @@
-# Graduation Vault Foundation
+# Graduation-Vaults-Foundation  
+## GV-Foundation
 
-**An institutional-grade, non-custodial governance framework for student donation vaults**
-
-> **Governance Notice:**  
-> This repository is governed by formal change control. All modifications are subject to the policies defined in `governance/change-control.md`.
+**Institutional-grade, non-custodial governance standards for Graduation Vaults**
 
 ---
 
-## Overview
+## Purpose
 
-The **Graduation Vault Foundation** defines the canonical technical and governance architecture for implementing Graduation Vaults using **SAFE smart accounts** and **Zodiac modular governance**.
+GV-Foundation defines the **canonical architecture, governance rules, and operational boundaries** for Graduation Vaults.
 
-This repository is **not** a wallet, **not** a custody platform, and **not** an investment product.
+This repository is **not** a product, protocol, or platform.  
+It is a **governed reference standard** used to deploy, operate, and audit student-specific donation vaults built on **SAFE smart accounts** and **Zodiac governance modules**.
 
-It is a reference foundation that schools, communities, and implementation partners can adopt to deploy **donation-only, time-locked, student-specific vaults** with cryptographically enforced governance.
-
-The design is intentionally conservative and institution-ready:
-
-- No custody  
-- No pooled funds  
-- No yield strategies  
-- No discretionary asset management  
-
-All rules are enforced **on-chain**, auditable by any third party, and aligned with long-term student outcomes.
+All documents in this repository describe **enforced behavior**, not discretionary policy.
 
 ---
 
-## Core Principles (Non-Negotiable)
+## What Graduation Vaults Are
 
-### Non-Custodial by Design
-SD Advisory Group and Self-Defi never hold private keys, never initiate transactions, and never have the ability to move funds.
+Graduation Vaults are **student-specific donation vaults** designed to:
 
-### Donation-Only Architecture
-Funds enter vaults as donations or gifts. There are no representations of return, yield, or investment performance.
+- Protect donor intent
+- Prevent unilateral control
+- Lock funds until graduation or documented hardship
+- Provide full transparency and auditability
+- Eliminate custodial and discretionary risk
 
-### Student-Specific Vaults
-Each vault corresponds to a single student and a defined graduation target.
-
-### Governance First
-All withdrawals require multi-signature approval, with a Parent or Guardian as a mandatory signer.
-
-### Time-Locked Graduation Enforcement
-Funds are cryptographically restricted until graduation conditions are met.
-
-### Radical Transparency
-All balances and transactions are publicly verifiable on-chain.
+They are intentionally conservative and **do not** include yield, investment, or asset management features.
 
 ---
 
-## System Architecture
+## Repository Structure
 
-The Graduation Vault System is composed of three distinct layers:
+This repository is organized as a **standards library**, not an application codebase.
 
-### 1. Control Layer (SAFE)
-- SAFE smart account  
-- Holds assets  
-- Enforces signer thresholds  
-- Executes approved transactions  
+/
+├─ README.md
+├─ docs/
+│ ├─ index.md
+│ ├─ architecture-overview.md
+│ ├─ gv-whitepaper.md
+│ ├─ operator-quickstart.md
+│ ├─ operator-deviations-policy.md
+│ ├─ signer-onboarding.md
+│ ├─ donor-transparency.md
+│ └─ rules-guard-manifest.md
+├─ governance/
+│ └─ change-control.md
+└─ assets/
+└─ pdfs/
+└─ gv-whitepaper-2025.pdf
 
-### 2. Policy Layer (Zodiac)
-- Transaction Guards (what cannot happen)  
-- Role Modifiers (who can propose vs approve)  
-- Optional time-based or event-based automation  
-
-### 3. Presentation Layer (External)
-- Read-only dashboards  
-- Education and disclosures  
-- Transaction construction assistance  
-
-**Important:** Presentation layers never hold keys and never execute transactions.
-
----
-
-## Graduation Vault Lifecycle
-
-Every Graduation Vault follows a fixed, ordered lifecycle:
-
-1. **CREATED**  
-   Safe is deployed, signers assigned, graduation target recorded.
-
-2. **ACTIVE**  
-   Donations allowed. Governance configuration is fixed.
-
-3. **LOCKED**  
-   Signer changes and policy changes are blocked.
-
-4. **GRADUATION ELIGIBLE**  
-   Graduation conditions met; withdrawal proposal may be created.
-
-5. **TRANSFERRED**  
-   Funds released to a **Student + Parent joint SAFE**.
-
-Lifecycle transitions are enforced using Zodiac Guards and Role restrictions.
 
 ---
 
-## Base Governance Model
+## Documentation Index (Start Here)
 
-### Signer Set (4)
-- Parent or Guardian (**mandatory signer**)  
-- School Representative  
-- Teacher / Counselor  
-- Independent Trustee or Community Oversight Member  
+📘 **Canonical Documentation Index**  
+→ **/docs/index.md**
 
-### Thresholds
-- **3-of-4** for graduation withdrawals  
-- **4-of-4** for emergency or hardship withdrawals  
-
-No single party can unilaterally access funds.
+This index routes readers to the correct documents based on their role.
 
 ---
 
-## Zodiac Modules (Standardized)
+## Core Foundation
 
-### Required Modules
-- **Roles Modifier** — defines proposer vs approver permissions  
-- **Transaction Guard** — enforces donation-only and graduation locks  
+These documents define **what the system is** and **what cannot change**.
 
-### Optional (Conservative)
-- Timelock or graduation trigger  
+- **Whitepaper (PDF)**  
+  Institutional-grade design rationale, lifecycle, and compliance framing  
+  → https://raw.githubusercontent.com/Self-Defi/Graduation-Vaults-Foundation/main/assets/pdfs/gv-whitepaper-2025.pdf
 
-### Explicitly Excluded
-- Yield automation  
-- Strategy execution  
-- Asset rebalancing  
-- Discretionary fund management  
+- **Whitepaper (Markdown)**  
+  Canonical GitHub-readable version  
+  → /docs/gv-whitepaper.md
 
----
-
-## Emergency & Hardship Access
-
-Emergency withdrawals are allowed only when:
-- A documented hardship policy exists  
-- **All four signers approve**  
-- Withdrawals are limited to the minimum necessary amount  
-
-This preserves compassion without undermining long-term protection.
+- **Architecture Overview**  
+  Control, policy, and presentation layer separation  
+  → /docs/architecture-overview.md
 
 ---
 
-## Trust Boundaries
+## Governance & Enforcement
 
-| Actor | Capabilities |
-|---|---|
-| Student | View-only access pre-graduation |
-| Parent / Guardian | Mandatory signer |
-| School | Governance participant |
-| Trustee | Independent oversight |
-| SD Advisory | Infrastructure & education only |
+These documents define **how authority works** and **what is enforced**.
 
-At no point does SD Advisory hold keys or gain transaction authority.
+- **Roles & Guard Manifest v1**  
+  Proposer / approver / executor rules and hard enforcement constraints  
+  → /docs/rules-guard-manifest.md
 
----
-
-## What This Repository Is Not
-
-- A wallet UI  
-- A custody solution  
-- A DeFi protocol  
-- A yield product  
-- A financial advisory service  
-
-This foundation exists to **encode donor intent and student protection into infrastructure**.
+- **Change Control Policy**  
+  Authoritative governance for all modifications  
+  → /governance/change-control.md
 
 ---
 
-## Change Control & Governance
+## Operations
 
-GV-Foundation is treated as **governed infrastructure**, not an evolving product or informal documentation set.
+These documents define **how the system is deployed correctly**.
 
-All changes to architecture, governance rules, operator procedures, signer models, or enforcement logic are subject to formal change control.
+- **Operator Quickstart**  
+  Base SAFE + Zodiac deployment template  
+  → /docs/operator-quickstart.md
 
-### Authoritative Policy
-All modifications to GV-Foundation standards are governed by:
+- **Operator Deviations & Extensions Policy**  
+  What operators may change, what must never change  
+  → /docs/operator-deviations-policy.md
 
-**`governance/change-control.md`**
+---
 
-This includes (but is not limited to):
-- Signer role definitions and thresholds  
-- Graduation and emergency withdrawal rules  
-- Operator permissions and limitations  
-- Zodiac Roles and Guard behavior  
-- Lock conditions and lifecycle enforcement  
+## Human-Facing Governance
 
-### No Silent Changes
-Governance-affecting changes must not be made informally, implicitly, or through operational shortcuts.
+These documents are written for **non-technical stakeholders**.
 
-Such changes require:
-- Explicit documentation  
-- Defined rationale and impact assessment  
-- Appropriate approval per the Change Control policy  
-- Versioning and permanent recordkeeping  
+- **Signer Onboarding & Responsibilities**  
+  Plain-language guide for parents, staff, and trustees  
+  → /docs/signer-onboarding.md
 
-### Source of Truth
-The on-chain SAFE configuration remains the ultimate source of truth.  
-Documentation exists to describe — not override — enforced behavior.
+- **Donor Transparency & Expectations**  
+  Plain-language guide for donors and sponsors  
+  → /docs/donor-transparency.md
+
+---
+
+## Non-Custodial Assertion
+
+At no point does GV-Foundation grant any operator, advisor, or implementation partner:
+
+- Signing authority
+- Proposal authority
+- Execution authority
+- Fund management responsibility
+
+All authority remains with the defined signer roles and is enforced on-chain.
+
+---
+
+## Document Authority
+
+- On-chain SAFE configuration is the **ultimate source of truth**
+- Documentation exists to **describe**, not override, enforcement
+- Governance changes require explicit approval and recordkeeping
 
 **GV-Foundation does not drift.**
 
 ---
 
-## Related Repositories
-
-- Graduation Vault HUB (dashboards & education)  
-- SAFE Global core contracts  
-- Gnosis Guild Zodiac modules  
-
----
-
-## License & Disclosure
-
-This repository provides **infrastructure patterns only**. It does not provide financial advice, investment services, or custodial functions.
-
-Schools and organizations should consult legal counsel before integrating Graduation Vaults with existing scholarship, nonprofit, or educational programs.
-
----
-
 ## Status
 
-**Production-ready reference architecture**  
-Deployed using battle-tested SAFE and Zodiac infrastructure.
+**Canonical Reference Standard**  
+Applies to all Graduation Vault deployments using GV-Foundation
