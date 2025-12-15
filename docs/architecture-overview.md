@@ -24,10 +24,10 @@ Graduation Vaults are implemented using **three strictly separated layers**.
 
 **Role:** Asset custody and execution
 
-- SAFE smart account
-- Holds vault assets
-- Enforces signer thresholds
-- Executes transactions only after governance approval
+SAFE smart accounts:
+- Hold vault assets
+- Enforce signer thresholds
+- Execute transactions only after governance approval
 
 Key properties:
 - No single signer control
@@ -47,6 +47,7 @@ Implemented using Zodiac modules:
 - **Roles Modifier**
   - Defines proposer vs approver permissions
   - Restricts execution authority
+
 - **Transaction Guard**
   - Blocks unauthorized transfers
   - Enforces graduation locks
@@ -69,7 +70,7 @@ Includes:
 - Educational materials
 - Transaction construction assistance
 
-Important constraints:
+Constraints:
 - No private keys
 - No transaction execution
 - No governance authority
@@ -91,7 +92,7 @@ Each vault follows a fixed lifecycle:
 Lifecycle transitions are enforced via:
 - Zodiac Guards
 - Role restrictions
-- Timelock logic (if enabled)
+- Optional timelock logic
 
 Manual overrides are not permitted.
 
@@ -101,7 +102,7 @@ Manual overrides are not permitted.
 
 - 4 signers per vault
 - Parent / Guardian is mandatory
-- Graduation withdrawals: 3-of-4
+- Graduation withdrawals: 3-of-4 (Parent required)
 - Emergency withdrawals: 4-of-4
 - Graduation payout → Student + Parent joint SAFE
 
@@ -141,3 +142,4 @@ Graduation Vaults function as **governed infrastructure**, not accounts or produ
 - Architecture: Locked
 - Enforcement: On-chain
 - Auditability: Continuous
+
