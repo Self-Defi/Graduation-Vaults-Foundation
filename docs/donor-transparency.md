@@ -6,22 +6,19 @@
 
 ## Why Graduation Vaults Exist
 
-Graduation Vaults exist to solve a common problem in education funding:
+Graduation Vaults exist to provide a direct, transparent, and protected pathway from donor contribution to student benefit — without relying on trust in any single institution or individual.
 
-Donors want to support students, but traditional donation systems make it difficult to verify where funds go, how they are protected, and whether they reach the intended student.
-
-Graduation Vaults provide a **direct, transparent, and protected pathway** from donor contribution to student benefit — without relying on trust in any single institution or individual.
+They replace discretionary control with cryptographically enforced governance.
 
 ---
 
 ## What Happens When You Donate
 
-When you donate to a Graduation Vault:
-
-- Your donation goes **directly into a digital vault** created for a specific student
-- The vault is secured by multiple independent signers
+When you donate:
+- Your donation goes directly into a vault created for a specific student
 - No single person or organization can access the funds alone
 - Funds remain locked until graduation or documented hardship
+- All activity is publicly verifiable
 
 There are no pooled accounts, discretionary transfers, or hidden reallocations.
 
@@ -29,41 +26,39 @@ There are no pooled accounts, discretionary transfers, or hidden reallocations.
 
 ## What a Graduation Vault Is (and Is Not)
 
-### A Graduation Vault IS:
+A Graduation Vault is:
 - A student-specific donation vault
-- Governed by parents, school representatives, staff, and an independent trustee
-- Fully transparent and publicly verifiable
+- Governed by multiple independent signers
 - Locked by default until graduation
+- Transparent and auditable
 
-### A Graduation Vault IS NOT:
+A Graduation Vault is not:
 - A bank account
-- An investment or savings product
-- A yield- or interest-generating account
+- An investment product
+- A yield-generating account
 - A discretionary scholarship fund
 
-Your donation is **protected**, not invested.
+Your donation is protected — not invested.
 
 ---
 
 ## Who Can Access the Funds
 
-Access to funds is controlled by **shared governance**, not discretion.
-
 Each vault has four independent signers:
 - Parent or Guardian (mandatory)
 - School Representative
-- Teacher, Counselor, or Staff Member
-- Independent Trustee or Community Oversight Member
+- Staff Member (teacher/counselor)
+- Independent Trustee
 
-### Graduation Release
-- Requires approval from **at least 3 of the 4 signers**
-- Must include the Parent or Guardian
-- Funds are released to a **Student + Parent joint SAFE**
+Graduation Release:
+- 3-of-4 approvals required
+- Parent approval required
+- Funds released to Student + Parent joint SAFE
 
-### Emergency / Hardship Release
-- Requires approval from **all 4 signers**
-- Requires documented hardship
-- Limited to the minimum necessary amount
+Emergency / Hardship:
+- 4-of-4 approvals required
+- Documented hardship required
+- Minimal amount only
 
 No donor, operator, or advisor can override these rules.
 
@@ -71,68 +66,61 @@ No donor, operator, or advisor can override these rules.
 
 ## Transparency & Verification
 
-Graduation Vaults are built on public, auditable infrastructure.
-
-This means:
-- Every donation is recorded on a public ledger
-- Vault balances are visible in real time
+Graduation Vaults are built on public infrastructure:
+- Donations are recorded on a public ledger
+- Balances are visible in real time
 - Withdrawals are permanently traceable
-- Anyone can independently verify activity
 
-You do not need to request reports or trust summaries.  
-**The ledger is the record.**
+The ledger is the record.
 
 ---
 
 ## What Operators and Advisors Cannot Do
 
-To be explicit:
-- Operators do not hold keys
-- Advisors do not manage funds
-- Schools do not have unilateral control
-- No one can move funds on your behalf
+- Do not hold keys
+- Do not manage funds
+- Do not approve transactions
+- Do not execute withdrawals
 
-If a transaction violates governance rules, it cannot occur.
+If a transaction violates rules, it cannot occur.
 
 ---
 
 ## If Circumstances Change
 
-### If a Student Leaves the Program
+If a student leaves:
 - The vault remains intact
 - Governance rules determine next steps
-- Funds are not automatically seized or reallocated
 
-### If a Signer Changes
-- Replacements follow documented procedures
-- Parent/Guardian role cannot be removed
+If a signer changes:
+- Replacement follows documented procedures
+- Parent role cannot be removed
 
-### If a School Transitions or Closes
-- Vaults remain verifiable and accessible
-- Student funds cannot be absorbed by the institution
+If a school transitions:
+- Vaults remain verifiable and cannot be absorbed by the institution
 
 ---
 
 ## Graduation & Beyond
 
 At graduation:
-- Funds move to a **Student + Parent joint vault**
-- The student gains hands-on experience with shared custody
-- Parents may step back over time as appropriate
+- Funds move to Student + Parent joint SAFE
+- The student gains shared custody experience
+- Parents may step back later
 
-Your donation directly supports the student’s next chapter.
+Your donation supports the student’s next chapter.
 
 ---
 
 ## What Graduation Vaults Do Not Promise
 
-Graduation Vaults do not promise:
-- Financial returns
-- Interest or yield
-- Market performance
-- Guaranteed outcomes
+They do not promise:
+- Returns
+- Yield
+- Performance
+- Outcomes
 
-They promise **transparency, protection, and accountability**.
+They promise transparency, protection, and accountability.
 
 ---
 
@@ -143,13 +131,10 @@ As a donor:
 - You verify
 - The system enforces the rules
 
-Graduation Vaults ensure your generosity is:
-- Visible
-- Purpose-bound
-- Protected
-- Student-centered
+Graduation Vaults ensure your donation remains visible, purpose-bound, and student-centered.
 
 ---
 
-**Audience:** Donors, Sponsors, Community Partners  
+**Audience:** Donors, Sponsors  
 **Status:** Approved Donor Education Document
+
