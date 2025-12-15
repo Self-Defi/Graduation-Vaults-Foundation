@@ -18,19 +18,26 @@ Operators do **not**:
 
 ## Preconditions
 
-Before deployment:
-- Correct network selected
+Before deployment, confirm:
+
+- Network selected (SAFE + Zodiac supported)
 - Four signer addresses verified
-- Graduation year documented
-- Graduation destination = Student + Parent joint SAFE
+- Signer identities mapped to roles (Parent / School / Staff / Trustee)
+- Graduation year recorded
+- Graduation destination will be a **Student + Parent joint SAFE**
+- Operator has no signer role and no signing access
 
 ---
 
-## Step 1 — Create the Vault SAFE
+## Step 1 — Create the Graduation Vault SAFE
+
+In Safe:
 
 - Name: `GV — <Student> — <Grad Year>`
 - Signers: 4
 - Threshold: 3-of-4
+
+Confirm the Parent/Guardian signer is included and recorded as mandatory.
 
 ---
 
@@ -40,44 +47,80 @@ Required:
 - Roles Modifier
 - Transaction Guard
 
-Optional:
-- Timelock (graduation trigger)
+Optional (conservative):
+- Timelock / graduation trigger
+
+Do not install modules that introduce yield, strategy execution, or discretionary automation.
 
 ---
 
-## Step 3 — Apply Governance Rules
+## Step 3 — Apply Base Governance Rules
 
-- All signers may propose
-- Parent signature required for withdrawals
-- Graduation withdrawal → Student + Parent SAFE
-- Emergency withdrawals → 4-of-4
+Configure Roles + Guard enforcement to match the Foundation baseline:
 
----
+### Proposals
+- All signers may create proposals for graduation withdrawals
 
-## Step 4 — Lock Configuration
+### Approval
+- Graduation withdrawals require 3-of-4 approvals
+- Parent approval is mandatory
 
-Before entering LOCKED:
-- Verify signer set
-- Verify guard enforcement
-- Test blocked transactions
+### Destination
+- Graduation payout destination must be a Student + Parent joint SAFE
+- EOAs are prohibited as graduation payout destinations
 
----
-
-## Step 5 — Graduation Execution
-
-- Create withdrawal proposal
-- Collect 3 approvals (Parent required)
-- Execute via Parent or Trustee
+### Emergency / Hardship
+- Emergency proposals may be created only by Parent or Trustee
+- Emergency withdrawals require 4-of-4 approvals
 
 ---
 
-## Documentation Required
+## Step 4 — Validate Guard Enforcement
 
-Record:
+Perform a basic validation pass:
+
+- Attempt outbound transfer before graduation eligibility → should fail
+- Attempt transfer to an EOA destination → should fail
+- Attempt configuration changes in LOCKED state → should fail
+- Confirm Parent approval requirement is enforced
+
+If any prohibited action succeeds, the vault is not compliant.
+
+---
+
+## Step 5 — Lock Configuration
+
+When entering LOCKED:
+
+- Confirm signer set is final
+- Confirm module set is final
+- Confirm guard enforcement is active
+
+After LOCKED, operators must not modify governance without formal signer approval.
+
+---
+
+## Step 6 — Graduation Execution (Standard Path)
+
+At graduation eligibility:
+
+1. Create withdrawal proposal
+2. Collect 3 approvals (Parent required)
+3. Execute as Parent or Trustee
+4. Confirm transfer destination = Student + Parent joint SAFE
+
+---
+
+## Required Recordkeeping
+
+For each vault, record:
+
 - Safe address
-- Signer roles
-- Graduation date
-- Enabled guards
+- Network
+- Signer addresses and mapped roles
+- Graduation year / eligibility reference
+- Enabled modules and guard policies
+- Date vault entered LOCKED
 
 ---
 
@@ -90,3 +133,4 @@ Enforcement belongs to code.
 ---
 
 **Status:** Canonical Operator Template
+
