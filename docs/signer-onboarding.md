@@ -6,9 +6,9 @@
 
 ## Why You Are a Signer
 
-As a signer, you hold a **governance role**, not a financial or managerial role.
+As a signer, you hold a governance role — not a financial or managerial role.
 
-Graduation Vaults are designed so that no single person controls student funds. Decisions require **shared approval** to protect students, donors, and institutions.
+Graduation Vaults are designed so that no single person controls student funds. Decisions require shared approval to protect students, donors, and institutions.
 
 Being a signer means:
 - You help safeguard a student’s future
@@ -21,13 +21,13 @@ You do not manage funds day-to-day.
 
 ## What a Graduation Vault Is (and Is Not)
 
-### A Graduation Vault IS:
+A Graduation Vault is:
 - A secure digital vault for student donations
 - Locked until graduation or documented hardship
 - Governed by multiple independent signers
-- Fully transparent and auditable
+- Transparent and auditable
 
-### A Graduation Vault IS NOT:
+A Graduation Vault is not:
 - A bank account
 - An investment product
 - A trading or savings account
@@ -57,19 +57,19 @@ Each vault has four signers:
 - Provides neutral oversight
 - Helps prevent conflicts of interest
 
-All signers have **equal voting power**.
+All signers have equal voting authority.
 
 ---
 
 ## How Decisions Are Made
 
 ### Graduation Withdrawal
-- Requires **3 of 4** approvals
+- Requires 3 of 4 approvals
 - Parent approval is mandatory
-- Funds go to a **Student + Parent joint SAFE**
+- Funds go to a Student + Parent joint SAFE
 
 ### Emergency / Hardship Withdrawal
-- Requires **4 of 4** approvals
+- Requires 4 of 4 approvals
 - Requires documented hardship
 - Limited to the minimum necessary amount
 
@@ -84,7 +84,7 @@ In practice, you will:
 - Approve or reject them
 - Ask questions when needed
 
-Most signers act **once or twice over several years**.
+Most signers act once or twice over several years.
 
 ---
 
@@ -97,7 +97,7 @@ You are not responsible for:
 - Donor behavior
 - Daily monitoring
 
-Your responsibility is limited to **good-faith governance decisions**.
+Your responsibility is limited to good-faith governance decisions.
 
 ---
 
@@ -115,7 +115,7 @@ There are no hidden accounts.
 ## Graduation & Transition
 
 At graduation:
-- Funds move to a Student + Parent joint vault
+- Funds move to a Student + Parent joint SAFE
 - Students learn shared custody
 - Parents may step back later
 
