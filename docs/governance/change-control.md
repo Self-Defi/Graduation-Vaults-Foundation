@@ -1,4 +1,4 @@
-[change-control.md](https://github.com/user-attachments/files/24175914/change-control.md)
+[change-control.md](https://github.com/user-attachments/files/24175921/change-control.md)
 # Change Control — GV Foundation
 
 This document defines how changes to the GV-Foundation standards are proposed, reviewed, approved, and recorded.
