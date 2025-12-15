@@ -4,7 +4,7 @@
 **Version:** 2025  
 **Status:** Canonical Reference  
 **Scope:** Architecture, Governance, and Enforcement  
-**Classification:** Non-Custodial Infrastructure Standard  
+**Classification:** Non-Custodial Infrastructure Standard
 
 ---
 
@@ -35,7 +35,6 @@ Graduation Vaults address these issues by replacing trust-based controls with **
 ## 2. Design Goals
 
 Graduation Vaults are designed to:
-
 - Eliminate unilateral control
 - Preserve donor intent
 - Protect students until graduation
@@ -49,8 +48,7 @@ The system is intentionally conservative and avoids yield, trading, or asset man
 
 ## 3. Non-Custodial Architecture
 
-Graduation Vaults are **non-custodial by design**.
-
+Graduation Vaults are non-custodial by design:
 - No operator, advisor, or institution holds private keys
 - No single signer can access funds alone
 - All authority is shared and enforced on-chain
@@ -61,10 +59,9 @@ Infrastructure providers configure the system but never control assets.
 
 ## 4. System Architecture
 
-Graduation Vaults use a layered architecture:
+Graduation Vaults use a layered architecture.
 
 ### 4.1 Control Layer — SAFE
-
 SAFE smart accounts:
 - Hold vault assets
 - Enforce signer thresholds
@@ -72,63 +69,45 @@ SAFE smart accounts:
 
 SAFE is the sole execution authority.
 
----
-
 ### 4.2 Policy Layer — Zodiac
-
 Zodiac modules enforce governance constraints:
+- Roles Modifier (proposer vs approver permissions)
+- Transaction Guard (lock enforcement, destination restrictions, governance tamper prevention)
 
-- **Roles Modifier**
-  - Defines proposer vs approver permissions
-- **Transaction Guard**
-  - Blocks unauthorized transfers
-  - Enforces graduation locks
-  - Prevents governance tampering
-
-Optional timelocks may enforce graduation dates.
-
----
+Optional:
+- Timelock or graduation trigger
 
 ### 4.3 Presentation Layer — External Interfaces
-
 Includes:
 - Read-only dashboards
 - Donor and signer visibility tools
-- Educational materials
+- Education materials
 
-Presentation layers:
-- Hold no keys
-- Execute no transactions
-- Possess no authority
+Presentation layers hold no keys and execute no transactions.
 
 ---
 
 ## 5. Governance Model
 
-Each Graduation Vault includes **four signers**:
-
+Each Graduation Vault includes four signers:
 1. Parent or Legal Guardian (mandatory)
 2. School Representative
 3. Teacher / Counselor / Staff
 4. Independent Trustee or Community Oversight Member
 
-### Thresholds
-- Graduation withdrawals: **3-of-4**, Parent required
-- Emergency withdrawals: **4-of-4**
-
-This structure eliminates unilateral access.
+Thresholds:
+- Graduation withdrawals: 3-of-4, Parent required
+- Emergency withdrawals: 4-of-4
 
 ---
 
 ## 6. Vault Lifecycle
 
-Each vault follows a fixed lifecycle:
-
-1. **CREATED** — Safe deployed, signers assigned
-2. **ACTIVE** — Donations allowed
-3. **LOCKED** — Governance changes blocked
-4. **GRADUATION ELIGIBLE** — Withdrawal proposals allowed
-5. **TRANSFERRED** — Funds move to Student + Parent joint SAFE
+1. CREATED — Safe deployed, signers assigned  
+2. ACTIVE — Donations allowed  
+3. LOCKED — Governance changes blocked  
+4. GRADUATION ELIGIBLE — Withdrawal proposals allowed  
+5. TRANSFERRED — Funds moved to Student + Parent joint SAFE  
 
 Lifecycle enforcement is on-chain and non-bypassable.
 
@@ -136,14 +115,14 @@ Lifecycle enforcement is on-chain and non-bypassable.
 
 ## 7. Graduation Payout Design
 
-At graduation, funds are transferred to a **Student + Parent joint SAFE**.
+At graduation, funds transfer to a Student + Parent joint SAFE.
 
-This design:
-- Prevents abrupt loss of oversight
-- Introduces students to shared custody
-- Allows gradual transition to full control
+EOAs are prohibited as graduation payout destinations.
 
-EOAs are explicitly prohibited as graduation destinations.
+This preserves:
+- oversight during transition
+- student learning
+- gradual handoff
 
 ---
 
@@ -151,20 +130,17 @@ EOAs are explicitly prohibited as graduation destinations.
 
 Emergency withdrawals are allowed only when:
 - A documented hardship policy exists
-- **All four signers approve**
-- Withdrawals are limited to the minimum necessary amount
-
-This preserves compassion without weakening safeguards.
+- All four signers approve
+- Withdrawals are minimal and explicitly specified
 
 ---
 
 ## 9. Transparency & Auditability
 
 Graduation Vaults are built on public infrastructure:
-
-- All balances are visible on-chain
-- All transactions are permanently recorded
-- Anyone can independently verify activity
+- balances are visible on-chain
+- transactions are permanently recorded
+- third parties can independently verify activity
 
 The ledger is the authoritative record.
 
@@ -173,10 +149,10 @@ The ledger is the authoritative record.
 ## 10. What Graduation Vaults Are Not
 
 Graduation Vaults are not:
-- Bank accounts
-- Investment products
-- Yield-generating systems
-- Discretionary scholarship funds
+- bank accounts
+- investment products
+- yield systems
+- discretionary scholarship funds
 
 They do not promise returns, performance, or outcomes.
 
@@ -184,11 +160,9 @@ They do not promise returns, performance, or outcomes.
 
 ## 11. Change Control
 
-Graduation Vaults are governed infrastructure.
+All changes to architecture, governance, or enforcement are governed by:
 
-All changes to architecture, governance, or enforcement are subject to formal change control as defined in:
-
-`governance/change-control.md`
+`/governance/change-control.md`
 
 The on-chain SAFE configuration remains the ultimate source of truth.
 
@@ -198,15 +172,11 @@ The on-chain SAFE configuration remains the ultimate source of truth.
 
 Graduation Vaults replace discretionary control with enforced governance.
 
-By combining SAFE smart accounts with Zodiac policy enforcement, the system ensures that:
-
-- Donors can verify outcomes
-- Students are protected until graduation
-- Institutions reduce custodial risk
-- Operators cannot interfere
-- Rules are enforced by code
-
-Graduation Vaults represent a durable, transparent model for student-centered donation infrastructure.
+By combining SAFE smart accounts with Zodiac policy enforcement, the system ensures:
+- donor funds are purpose-bound
+- students are protected until graduation
+- operators cannot interfere
+- rules are enforced by code
 
 ---
 
