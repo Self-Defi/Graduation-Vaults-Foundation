@@ -6,132 +6,110 @@
 
 ## Purpose
 
-This document defines **what operators MAY change**, **what operators MUST NOT change**, and **how deviations are formally approved** within the Graduation Vault ecosystem.
+This policy defines what operators may change, what operators must never change, and how deviations are formally approved across the Graduation Vault ecosystem.
 
-Its purpose is to:
+It exists to:
 - Prevent governance drift across schools and cohorts
-- Protect students, families, donors, and operators
+- Protect students, donors, and institutions
+- Protect operators from being pressured into unsafe changes
 - Preserve Graduation Vaults as institution-grade, non-custodial infrastructure
-
-This policy applies to **all operators**, including school staff, contractors, implementation partners, and third-party service providers.
 
 ---
 
 ## Operator Definition
 
-An **Operator** is any individual or entity responsible for configuring, deploying, or maintaining Graduation Vault infrastructure **without holding keys or governance authority**.
+An Operator is any person or entity responsible for configuring, deploying, or maintaining Graduation Vault infrastructure **without custody or governance authority**.
 
 Operators:
 - Configure SAFE + Zodiac according to approved templates
-- Do **not** hold private keys
-- Do **not** approve transactions
-- Do **not** execute withdrawals
-- Do **not** override governance rules
+- Do not hold keys
+- Do not approve transactions
+- Do not execute withdrawals
+- Do not override governance rules
 
 ---
 
-## Non-Negotiable Invariants (MUST NOT CHANGE)
+## Non-Negotiable Invariants (Must Not Change)
 
-The following invariants are foundational. **No deviation is permitted under any circumstance.**
+No deviation is permitted under any circumstance.
 
-### 1. Non-Custodial Architecture
-- Operators must never hold private keys
-- Operators must never be added as signers
-- Operators must never initiate or execute transactions
+1. **Non-Custodial Architecture**
+   - Operators must never hold private keys
+   - Operators must never be added as signers
 
-### 2. Donation-Only Designation
-- No yield strategies
-- No investment representations
-- No pooling of student funds
-- No discretionary asset management
+2. **Donation-Only Designation**
+   - No yield strategies
+   - No investment representations
+   - No pooling of student funds
+   - No discretionary asset management
 
-### 3. Mandatory Parent / Guardian Signer
-- A Parent or Legal Guardian must always remain a mandatory signer
-- This role may not be removed, bypassed, or replaced
+3. **Mandatory Parent / Guardian Role**
+   - Parent/Guardian remains a mandatory signer
+   - Role cannot be removed, bypassed, or replaced
 
-### 4. Graduation Lock Enforcement
-- Funds must remain locked until graduation eligibility
-- Early withdrawals are allowed only via documented hardship policy
+4. **Graduation Lock Enforcement**
+   - Funds locked until graduation eligibility
+   - Early withdrawals only via documented hardship path
 
-### 5. Governance Threshold Floors
-- Graduation withdrawals: **minimum 3-of-4**
-- Emergency / hardship withdrawals: **4-of-4 only**
+5. **Governance Threshold Floors**
+   - Graduation withdrawals: minimum 3-of-4
+   - Emergency withdrawals: 4-of-4 only
 
-### 6. Destination Safety
-- Graduation payouts must go to a **Student + Parent joint SAFE**
-- EOAs are not permitted as graduation destinations
-
----
-
-## Approved Operator-Level Configurations (MAY CHANGE)
-
-The following configurations may be adjusted **without additional approval**, provided they do not violate invariants.
-
-### 1. Network Selection
-- Operators may select supported networks with mature SAFE + Zodiac tooling
-
-### 2. Graduation Date / Time Parameters
-- Graduation unlock date may be configured per student
-
-### 3. Signer Identity (Within Role)
-- Individuals filling SCHOOL, STAFF, or TRUSTEE roles may change
-- Role count and structure must remain unchanged
-
-### 4. Presentation Layer
-- Branding
-- UI layout
-- Read-only dashboards
-- Educational content
+6. **Destination Safety**
+   - Graduation payouts go only to Student + Parent joint SAFE
+   - EOAs are prohibited as graduation destinations
 
 ---
 
-## Conditional Deviations (REQUIRE FORMAL APPROVAL)
+## Operator-Level Configurations (May Change)
 
-The following changes require **documented signer approval** and must be recorded.
+Operators may adjust the following without additional approval:
 
-### 1. Threshold Increases
-- Increasing thresholds above baseline is allowed
-- Decreasing thresholds is prohibited
+- Network selection (SAFE + Zodiac supported)
+- Graduation date / timelock parameters per student
+- Signer identity within roles (School/Staff/Trustee) due to staffing changes
+- Presentation layer branding and dashboards (read-only)
 
-### 2. Additional Guards
-- Extra safety guards may be added
-- Guards must not weaken existing restrictions
-
-### 3. Extended Timelocks
-- Longer lock periods are allowed
-- Shorter lock periods are prohibited
-
-### 4. Hardship Policy Customization
-- Schools may define hardship criteria
-- Full consensus requirement may not be reduced
+Operators may not change role count, thresholds, or enforcement logic.
 
 ---
 
-## Prohibited Changes (MUST NEVER OCCUR)
+## Conditional Deviations (Require Formal Approval)
 
-The following actions are explicitly forbidden:
+The following changes require documented signer approval and recordkeeping:
+
+- Increasing thresholds above baseline
+- Adding additional guards that increase restrictions
+- Extending lock durations beyond baseline
+- Hardship policy customization (without reducing approvals)
+
+Decreasing thresholds, weakening restrictions, or bypassing locks is prohibited.
+
+---
+
+## Prohibited Changes (Never Allowed)
+
+The following actions invalidate the Graduation Vault deployment:
 
 - Adding operators as signers
 - Allowing EOAs as graduation payout destinations
-- Enabling yield, staking, or strategy execution
-- Removing Transaction Guards
-- Removing Roles Modifiers
+- Removing Transaction Guards or Roles Modifiers
+- Enabling yield, staking, strategy execution, or asset management
 - Allowing withdrawals without Parent approval
-- Circumventing LOCKED state restrictions
-
-Any instance of these actions invalidates the Graduation Vault deployment.
+- Modifying governance in LOCKED state without formal approval
 
 ---
 
 ## Deviation Approval Process
 
-When a conditional deviation is requested:
+When an allowed deviation is requested:
 
-1. Deviation request is documented
-2. Rationale is clearly stated
-3. Impact assessment is provided
-4. **All signers approve**
-5. Deviation is recorded with timestamp and Safe address
+1. Document the requested change
+2. Provide rationale
+3. Provide impact assessment
+4. Obtain signer approval (per Change Control requirements)
+5. Record the decision and effective date
+6. Record Safe address(es) affected
 
 Unrecorded deviations are not permitted.
 
@@ -139,21 +117,22 @@ Unrecorded deviations are not permitted.
 
 ## Enforcement
 
-This policy is enforced through:
-- SAFE signer thresholds
+This policy is enforced via:
+- SAFE thresholds
 - Zodiac Roles and Guards
-- Institutional documentation requirements
+- Formal Change Control
 
-Failure to adhere constitutes a governance breach.
+Failure to adhere is a governance breach.
 
 ---
 
 ## Status
 
 - Version: v1.0
-- Scope: Ecosystem-wide baseline
-- Change Control: Signer-approved only
+- Scope: Ecosystem baseline
+- Change Control: Required
 
 ---
 
-**Graduation Vaults are infrastructure, not discretion.**
+**Graduation Vaults are infrastructure — not discretion.**
+
