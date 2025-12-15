@@ -6,84 +6,157 @@
 
 ## Purpose
 
-This manifest defines **proposer, approver, executor rules** and **hard enforcement constraints** for Graduation Vaults using SAFE and Zodiac.
+This manifest defines the canonical proposer / approver / executor rules and hard enforcement constraints for Graduation Vaults using SAFE and Zodiac.
 
 This document is authoritative for governance behavior.
 
 ---
 
-## Signer Roles
+## Signer Roles (4 Total)
 
-- PARENT — Mandatory signer
-- SCHOOL — Operational governance
-- STAFF — Student-centered oversight
-- TRUSTEE — Independent oversight
+- **PARENT** — Parent or Legal Guardian (mandatory signer)
+- **SCHOOL** — School Representative
+- **STAFF** — Teacher / Counselor / Staff
+- **TRUSTEE** — Independent Trustee / Community Oversight
 
 ---
 
-## Vault States
+## Vault State Machine
 
 CREATED → ACTIVE → LOCKED → GRADUATION_ELIGIBLE → TRANSFERRED
 
-State transitions are enforced by Guards and role restrictions.
+State transitions must be enforced via Guards and role restrictions.
 
 ---
 
-## Graduation Withdrawal Rules
+## Action Classes
 
-**Proposers:** All signers  
-**Approvers:** 3-of-4 required  
-**Mandatory:** Parent signature  
-**Destination:** Student + Parent joint SAFE  
-**Executor:** Parent or Trustee  
-
-Withdrawals before graduation eligibility are blocked.
+Policies apply across four action classes:
+1. Inbound Donations (permissionless)
+2. Graduation Withdrawals
+3. Emergency / Hardship Withdrawals
+4. Configuration Changes
 
 ---
 
-## Emergency / Hardship Rules
+## Graduation Withdrawals (Standard Path)
 
-**Proposers:** Parent or Trustee  
-**Approvers:** 4-of-4 required  
-**Executor:** Parent or Trustee  
+### Proposers
+- PARENT
+- SCHOOL
+- STAFF
+- TRUSTEE
 
-Withdrawals must be minimal and documented.
+### Approvers
+- All four may approve
+
+### Threshold
+- 3-of-4 required
+- Parent signature mandatory
+
+### Destination Constraint
+Graduation withdrawals may only execute to:
+- A **Student + Parent joint SAFE** created for graduation handoff
+
+EOA destinations are prohibited.
+
+### Timing Constraint
+Graduation withdrawals are blocked until the vault is in:
+- GRADUATION_ELIGIBLE
+
+### Executor
+- PARENT or TRUSTEE
 
 ---
 
-## Configuration Change Rules
+## Emergency / Hardship Withdrawals (Exception Path)
 
-**Proposers:** Trustee  
-**Approvers:** 4-of-4 required  
+### Proposers
+- PARENT
+- TRUSTEE
 
-Blocked entirely in LOCKED and later states.
+### Approvers
+- 4-of-4 required (full consensus)
+
+### Constraints
+- Withdrawal amount must be explicitly specified
+- Withdrawals must be minimal
+- Destination must be an approved hardship destination
+
+### Executor
+- PARENT or TRUSTEE
 
 ---
 
-## Guard-Level Enforcement
+## Configuration Changes
+
+Includes:
+- Adding/removing signers
+- Changing thresholds
+- Adding/removing modules
+- Adding/removing/modifying guards
+
+### Proposers
+- TRUSTEE
+
+### Approvers
+- 4-of-4 required
+
+### State Constraints
+- CREATED: allowed
+- ACTIVE: allowed (restricted)
+- LOCKED: blocked
+- GRADUATION_ELIGIBLE: blocked
+- TRANSFERRED: blocked
+
+Signer replacement in ACTIVE is allowed only for key loss or role turnover, and must retain the four-role model.
+
+---
+
+## LOCKED State Enforcement
+
+When the vault is LOCKED:
+- No signer changes
+- No threshold changes
+- No module changes
+- No guard changes
+- No outbound transfers
+
+Exception:
+- Emergency / hardship withdrawals (4-of-4 only)
+
+---
+
+## Guard-Level Hard Rules
 
 Guards must block:
-- Outbound transfers without Parent approval
-- Transfers before graduation eligibility
-- EOAs as destinations
-- Governance changes in LOCKED state
-- Removal of Parent role
+- Any outbound transfer without Parent approval
+- Any outbound transfer before GRADUATION_ELIGIBLE
+- Transfers to non-approved destinations (including EOAs)
+- Any configuration change in LOCKED or later states
+- Any signer removal that would eliminate Parent role
 
-Guards override role permissions.
+Guards override role permissions if rules are violated.
 
 ---
 
 ## Non-Custodial Assertion
 
-No operator, advisor, or platform has:
-- Signing authority
-- Proposal authority
-- Execution authority
+This manifest grants no authority to operators, advisors, or implementation partners.
+
+They have:
+- No signing authority
+- No proposal authority
+- No execution authority
+
+All authority remains with the defined signer roles.
 
 ---
 
 ## Status
 
 - Version: v1.0
-- Enforcement: On-chain
+- Status: Production-ready baseline
 - Change Control: Required
+- Enforcement: On-chain
+
