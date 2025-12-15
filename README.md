@@ -30,12 +30,16 @@ If you are unsure where to start, read the **README** first.
 These documents define **what the system is** and **what cannot change**.
 
 - **README**
-  - System overview, principles, trust boundaries, governance posture  
-  → `README.md`
+  - System overview, principles, trust boundaries, and governance posture
+  - → docs/README.md
 
 - **Institutional Whitepaper (PDF)**
-  - Design rationale, lifecycle, compliance framing  
-  → https://raw.githubusercontent.com/Self-Defi/Graduation-Vaults-Foundation/main/assets/pdf/gv-whitepaper-2025.pdf
+  - Design rationale, lifecycle, and compliance framing
+  - → https://raw.githubusercontent.com/Self-Defi/Graduation-Vaults-Foundation/main/docs/assets/pdf/gv-whitepaper-2025.pdf
+
+- **Architecture Overview**
+  - Control, policy, and presentation layer separation
+  - → docs/architecture-overview.md
 
 - **Architecture Overview**
   - Control, policy, and presentation layer separation  
