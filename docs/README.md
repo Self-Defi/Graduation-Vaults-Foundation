@@ -1,107 +1,55 @@
-# Graduation-Vaults-Foundation  
-## GV-Foundation
+# GV-Foundation — Documentation
 
-Institutional-grade, non-custodial governance standards for Graduation Vaults.
+This `/docs` folder is the **canonical documentation layer** for the Graduation Vault Foundation standard.
 
----
-
-## Purpose
-
-GV-Foundation defines the **canonical architecture, governance rules, and operational boundaries** for Graduation Vaults built using **SAFE smart accounts** and **Zodiac governance modules**.
-
-This repository is **not** a product, protocol, or platform.
-
-It is a **governed reference standard** used to deploy, operate, audit, and enforce student-specific donation vaults.
-
-All documents in this repository describe **enforced behavior**, not discretionary policy.
+If you’re viewing this on GitHub Pages, go to the main index:  
+- **Start here:** [index.md](index.md)
 
 ---
 
-## How to Use This Repository
+## What’s inside `/docs`
 
-This index routes readers to the correct documents based on their role.
+### Core foundation
+- **Architecture Overview**  
+  - [architecture-overview.md](architecture-overview.md)
 
-If you are unsure where to start, read the **README** first.
+- **Whitepaper (Markdown)**  
+  - [gv-whitepaper.md](gv-whitepaper.md)
 
----
-
-## Core Foundation
-
-These documents define **what the system is** and **what cannot change**.
-
-- **README**
-  - System overview, principles, trust boundaries, and governance posture
-  - → docs/README.md
-
-- **Institutional Whitepaper (PDF)**
-  - Design rationale, lifecycle, and compliance framing
-  - → https://raw.githubusercontent.com/Self-Defi/Graduation-Vaults-Foundation/main/docs/assets/pdf/gv-whitepaper-2025.pdf
-
-- **Architecture Overview**
-  - Control, policy, and presentation layer separation
-  - → docs/architecture-overview.md
-
-- **Architecture Overview**
-  - Control, policy, and presentation layer separation  
-  → `docs/architecture-overview.md`
+- **Whitepaper (PDF)**  
+  - [assets/gv-whitepaper.pdf](assets/gv-whitepaper.pdf)
 
 ---
 
-## Governance & Enforcement
+## Governance & enforcement
+- **Rules & Guard Manifest**  
+  - [rules-guard-manifest.md](rules-guard-manifest.md)
 
-These documents define **how authority works** and **what is enforced**.
+- **Signer Onboarding**  
+  - [signer-onboarding.md](signer-onboarding.md)
 
-- **Roles & Guard Manifest v1**
-  - Proposer / approver / executor rules and hard constraints  
-  → `docs/rules-guard-manifest.md`
+- **Operator Quickstart**  
+  - [operator-quickstart.md](operator-quickstart.md)
 
-- **Change Control Policy**
-  - Authoritative governance for all modifications  
-  → `governance/change-control.md`
+- **Operator Deviations Policy**  
+  - [operator-deviations-policy.md](operator-deviations-policy.md)
 
----
-
-## Operations
-
-These documents define **how the system is deployed correctly**.
-
-- **Operator Quickstart**
-  - Base SAFE + Zodiac deployment template  
-  → `docs/operator-quickstart.md`
-
-- **Operator Deviations & Extensions Policy**
-  - What operators may change, what must never change  
-  → `docs/operator-deviations-policy.md`
+- **Donor Transparency**  
+  - [donor-transparency.md](donor-transparency.md)
 
 ---
 
-## Human-Facing Governance
+## Governance policies folder
+Additional governance policies live here:
 
-These documents are written for **non-technical stakeholders**.
-
-- **Signer Onboarding & Responsibilities**
-  - Plain-language guide for parents, staff, and trustees  
-  → `docs/signer-onboarding.md`
-
-- **Donor Transparency & Expectations**
-  - Plain-language guide for donors and sponsors  
-  → `docs/donor-transparency.md`
+- [governance/](governance/)
 
 ---
 
-## Document Authority
-
-- On-chain SAFE configuration is the **ultimate source of truth**
-- Documentation exists to **describe**, not override, enforcement
-- Governance changes require **explicit approval and recordkeeping**
-
-GV-Foundation **does not drift**.
-
----
-
-## Status
-
-**Canonical Reference Standard**
-
-Applies to all Graduation Vault deployments using GV-Foundation.
+## Notes on links (important)
+- All links in `/docs` are **relative paths** so they work on:
+  - GitHub repo browsing
+  - GitHub Pages
+- The PDF is expected at:  
+  - `docs/assets/gv-whitepaper.pdf`
 
