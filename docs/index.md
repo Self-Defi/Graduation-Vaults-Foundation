@@ -1,104 +1,81 @@
+---
+title: GV-Foundation
+---
+
 # Graduation-Vaults-Foundation  
-## GV-Foundation
+**GV-Foundation** — institutional-grade, non-custodial governance standards for Graduation Vaults.
 
-**Institutional-grade, non-custodial governance standards for Graduation Vaults**
+## Purpose {#purpose}
 
----
+GV-Foundation defines the **canonical architecture, governance rules, and enforced behaviors** for Graduation Vault systems built using SAFE smart accounts and Zodiac governance modules.
 
-## Purpose
+This repository is **not** a product, protocol, or platform.  
+It is a **governed reference standard** used to deploy, operate, and audit Graduation Vault governance modules.
 
-GV-Foundation defines the **canonical architecture, governance rules, and operational boundaries** for Graduation Vaults.
-
-This repository is not a product, protocol, or platform.  
-It is a **governed reference standard** used to deploy, operate, and audit student-specific donation vaults built on **SAFE smart accounts** and **Zodiac governance modules**.
-
-All documents in this repository describe **enforced behavior**, not discretionary policy.
+All documents in this repository describe **enforced behavior**, not discretionary guidance.
 
 ---
 
-## How to Use This Repository
+## How to Use This Repository {#how-to-use-this-repository}
 
 This index routes readers to the correct documents based on their role.
 
-If you are unsure where to start, read the **README** first.
+If you’re unsure where to start, read the **README** first:  
+- **Docs README:** [README.md](README.md)
 
 ---
 
-## Core Foundation
+## Core Foundation {#core-foundation}
 
 These documents define **what the system is** and **what cannot change**.
 
-- **README.md**  
-  System overview, principles, trust boundaries, and governance posture  
-  → /README.md
+- **System Overview / Principles / Trust Boundaries**  
+  - [README.md](README.md)
 
-- **Whitepaper (PDF)**  
-  Institutional-grade design rationale, lifecycle, and compliance framing  
-  → https://raw.githubusercontent.com/Self-Defi/Graduation-Vaults-Foundation/main/assets/pdfs/gv-whitepaper-2025.pdf
-
-- **Whitepaper (Markdown)**  
-  Canonical GitHub-readable whitepaper version  
-  → /docs/gv-whitepaper.md
+- **Institutional Whitepaper (PDF)**  
+  - [docs/assets/gv-whitepaper.pdf](assets/gv-whitepaper.pdf)
 
 - **Architecture Overview**  
-  Control, policy, and presentation layer separation  
-  → /docs/architecture-overview.md
+  - [architecture-overview.md](architecture-overview.md)
 
 ---
 
-## Governance & Enforcement
+## Governance & Enforcement {#governance-and-enforcement}
 
 These documents define **how authority works** and **what is enforced**.
 
-- **Roles & Guard Manifest v1**  
-  Proposer / approver / executor rules and hard enforcement constraints  
-  → /docs/rules-guard-manifest.md
+- **Rules & Guard Manifest**  
+  - [rules-guard-manifest.md](rules-guard-manifest.md)
 
-- **Change Control Policy**  
-  Authoritative governance for all modifications  
-  → /governance/change-control.md
-
----
-
-## Operations
-
-These documents define **how the system is deployed correctly**.
+- **Signer Onboarding**  
+  - [signer-onboarding.md](signer-onboarding.md)
 
 - **Operator Quickstart**  
-  Base SAFE + Zodiac deployment template  
-  → /docs/operator-quickstart.md
+  - [operator-quickstart.md](operator-quickstart.md)
 
-- **Operator Deviations & Extensions Policy**  
-  What operators may change, what must never change  
-  → /docs/operator-deviations-policy.md
+- **Operator Deviations Policy**  
+  - [operator-deviations-policy.md](operator-deviations-policy.md)
 
----
-
-## Human-Facing Governance
-
-These documents are written for non-technical stakeholders.
-
-- **Signer Onboarding & Responsibilities**  
-  Plain-language guide for parents, staff, and trustees  
-  → /docs/signer-onboarding.md
-
-- **Donor Transparency & Expectations**  
-  Plain-language guide for donors and sponsors  
-  → /docs/donor-transparency.md
+- **Donor Transparency**  
+  - [donor-transparency.md](donor-transparency.md)
 
 ---
 
-## Document Authority
+## Governance Policies {#governance-policies}
 
-- On-chain SAFE configuration is the **ultimate source of truth**
-- Documentation exists to **describe**, not override, enforcement
-- Governance changes require explicit approval and recordkeeping
+Additional governance policies are stored inside the governance folder:
 
-**GV-Foundation does not drift.**
+- **Governance folder**  
+  - [governance/](governance/)
+
+> Tip: If you click into `governance/` on GitHub, you’ll see all policy documents listed there.
 
 ---
 
-## Status
+## Source Documents {#source-documents}
 
-**Canonical Reference Index**  
-Applies to all Graduation Vault deployments using GV-Foundation
+If you want the markdown version of the whitepaper:
+
+- **Whitepaper (Markdown)**  
+  - [gv-whitepaper.md](gv-whitepaper.md)
+
